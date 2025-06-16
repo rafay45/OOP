@@ -35,7 +35,7 @@ class Rigistration {
     constructor(pass) {
         this.password = pass
     }
-    
+
     submit() {                                     // <= Method
         console.log(`Hey ${this.userName} Your rigistration has been recorded`);
 
@@ -49,6 +49,57 @@ rigisObj.submit()
 // Properties Of OOP(Object-Oriented Programming)
 
 // 1) Abstruction
+
+class Car {
+    startEngine() {
+        console.log('Hmmmm Hmmmmmmm...');
+    }
+
+    drive() {
+        this.startEngine()                  // <= abstraction applied here
+        console.log('Hmmmmmmmmmmmmm...');
+    }
+}
+
+const carObj = new Car()
+console.log(carObj);
+carObj.drive()
+
 // 2) Encapsulation
-// 3) Inheritance 
+
+class UserData {
+    name = 'Rafay'
+    fatherName = 'Faheem'
+    age = 19
+    #email;                                 // Private Property                           
+    #password;                             // Private Property
+
+    constructor(email, password) {
+        this.#email = email
+        this.#password = password
+    }
+
+    getPassword() {
+        return this.#password;
+    }
+
+    setMethod(newEmail, newPassword) {
+        if (newEmail === this.#email && newPassword.length >= 6) {
+            this.#password = newPassword;
+            console.log("you have been allowed here");
+            
+        } else {
+            console.log("you are not Allow here");
+
+        }
+    }
+}
+
+const userDataObj = new UserData('rafay123@gmail.com', '123456')
+console.log(userDataObj);
+userDataObj.setMethod('rafay123@gmail.com','236854');
+// console.log(userDataObj.#password);       <= Uncaught SyntaxError: Private field "#password"
+
+
+// 3) Inheritance
 // 4) Polymorphism
