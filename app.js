@@ -36,7 +36,7 @@ class Rigistration {
         this.password = pass
     }
 
-    submit() {                                     // <= Method
+    submit() {                                      // <= Method
         console.log(`Hey ${this.userName} Your rigistration has been recorded`);
 
     }
@@ -56,7 +56,7 @@ class Car {
     }
 
     drive() {
-        this.startEngine()                  // <= abstraction applied here
+        this.startEngine()                        // <= abstraction applied here
         console.log('Hmmmmmmmmmmmmm...');
     }
 }
@@ -71,8 +71,8 @@ class UserData {
     name = 'Rafay'
     fatherName = 'Faheem'
     age = 19
-    #email;                                 // Private Property                           
-    #password;                             // Private Property
+    #email;                                       // Private Property                           
+    #password;                                   // Private Property
 
     constructor(email, password) {
         this.#email = email
@@ -87,7 +87,7 @@ class UserData {
         if (newEmail === this.#email && newPassword.length >= 6) {
             this.#password = newPassword;
             console.log("you have been allowed here");
-            
+
         } else {
             console.log("you are not Allow here");
 
@@ -97,9 +97,68 @@ class UserData {
 
 const userDataObj = new UserData('rafay123@gmail.com', '123456')
 console.log(userDataObj);
-userDataObj.setMethod('rafay123@gmail.com','236854');
+userDataObj.setMethod('rafay123@gmail.com', '236854');
 // console.log(userDataObj.#password);       <= Uncaught SyntaxError: Private field "#password"
 
 
 // 3) Inheritance
+
+class Animals {
+    firstPet = 'Cat'
+    scondPet = 'Dog'
+    thirdPet;
+
+    constructor(thirdPet) {
+        this.thirdPet = thirdPet
+    }
+    speak() {
+        console.log(`The ${this.firstPet} makes a sound meow`);
+
+    }
+}
+
+class moreAnimals extends Animals {             // <= inheritance applied here      
+    speak() {
+        super.speak()                          //  <= super Call the parent method 
+        console.log(`The ${this.scondPet} is Deaf`);
+
+    }
+}
+const aniObj = new moreAnimals("Parrot")
+console.log(aniObj);
+aniObj.speak()
+
+
 // 4) Polymorphism
+
+class clothes {
+    type() {
+     console.log('Clothes');
+     
+    }
+}
+
+class shirt extends clothes{
+    type(){
+        console.log('T-shirt');
+        
+    }
+}
+
+class pent extends clothes{
+    type(){
+        console.log('Pent');
+        
+    }
+}
+class jacket extends clothes {
+    type(){
+        console.log('Jacket');
+        
+    }
+}
+// Clothes of Object 
+const clothesObj = [new clothes(), new shirt(), new pent(), new jacket()]
+
+
+clothesObj.forEach(clothe => clothe.type())              // <= Polymorphism in action
