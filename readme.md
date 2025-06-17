@@ -17,3 +17,8 @@
 <h5>Polymorphism</h5>
 </li>
 </ul>
+
+<h3>Abstraction:📱📶</h3>
+<p>Abstraction means that we hide the internal code from the user and only show what is necessary for them. The behind-the-scenes logic is only known to the developer — the user doesn’t need to know how things work in the background.
+
+For example, when we make a call using a mobile phone, we just press the call button. We don’t know how the signals are being sent, how the connection is made — all that happens behind the scenes. This is how abstraction works.</p>
