@@ -43,7 +43,7 @@ If we need to access the parent class’s data inside the child class, we can us
 
 By using inheritance, we can keep our code clean, avoid complexity, and easily refer to the parent class when needed.</p>
 
-<h4>4. Polymorphism⛓️📌</h4>
+<h3>4. Polymorphism⛓️📌</h3>
 <p>🔹Polymorphism means "one name, many forms" — the same method having different behaviors in different classes. In other words, one method is shared by all, but each object implements it in its own way.
 
 For example, if we create a function inside a class (also called a method), and then we inherit that method into all child classes but each child class uses that same method differently that’s exactly what polymorphism is.
