@@ -35,10 +35,17 @@ So, in short, encapsulation allows us to make our data or code private and secur
 <h3>3. Inheritance:🧬📡</h3>
 <p>🔹Inheritance means that one class can inherit the properties (data) and methods (functions) of another class  in other words, it can reuse them. This helps avoid writing the same code again and again. We simply inherit the other class.
 
-To inherit a class, we use the syntax:
-"class Child extends Parent"
+To inherit a class, we use the syntax: <br>
+"class Child extends Parent" <br>
 This allows the child class to inherit from the parent class.
 
 If we need to access the parent class’s data inside the child class, we can use the super keyword it's a special keyword used for inheritance.
 
 By using inheritance, we can keep our code clean, avoid complexity, and easily refer to the parent class when needed.</p>
+
+<h4>4. Polymorphism⛓️📌</h4>
+<p>🔹Polymorphism means "one name, many forms" — the same method having different behaviors in different classes. In other words, one method is shared by all, but each object implements it in its own way.
+
+For example, if we create a function inside a class (also called a method), and then we inherit that method into all child classes but each child class uses that same method differently that’s exactly what polymorphism is.
+
+It allows flexibility in the code and helps objects behave differently even with the same method name.</p>
